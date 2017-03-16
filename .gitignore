@@ -1,0 +1,35 @@
+## Created by .ignore support plugin (hsz.mobi)
+#.gitignore
+#Would skip repository React/
+#node_modules/babel-helper-bindify-decorators/
+#node_modules/babel-helper-builder-binary-assignment-operator-visitor/
+#node_modules/babel-helper-explode-assignable-expression/
+#node_modules/babel-helper-explode-class/
+#node_modules/babel-helper-remap-async-to-generator/
+#node_modules/babel-plugin-syntax-async-functions/
+#node_modules/babel-plugin-syntax-async-generators/
+#node_modules/babel-plugin-syntax-class-constructor-call/
+#node_modules/babel-plugin-syntax-class-properties/
+#node_modules/babel-plugin-syntax-decorators/
+#node_modules/babel-plugin-syntax-do-expressions/
+#node_modules/babel-plugin-syntax-dynamic-import/
+#node_modules/babel-plugin-syntax-exponentiation-operator/
+#node_modules/babel-plugin-syntax-export-extensions/
+#node_modules/babel-plugin-syntax-function-bind/
+#node_modules/babel-plugin-syntax-object-rest-spread/
+#node_modules/babel-plugin-syntax-trailing-function-commas/
+#node_modules/babel-plugin-transform-async-generator-functions/
+#node_modules/babel-plugin-transform-async-to-generator/
+#node_modules/babel-plugin-transform-class-constructor-call/
+#node_modules/babel-plugin-transform-class-properties/
+#node_modules/babel-plugin-transform-decorators/
+#node_modules/babel-plugin-transform-do-expressions/
+#node_modules/babel-plugin-transform-exponentiation-operator/
+#node_modules/babel-plugin-transform-export-extensions/
+#node_modules/babel-plugin-transform-function-bind/
+#node_modules/babel-plugin-transform-object-rest-spread/
+#node_modules/babel-preset-stage-0/
+#node_modules/babel-preset-stage-1/
+#node_modules/babel-preset-stage-2/
+#node_modules/babel-preset-stage-3/
+Would skip repository React/
