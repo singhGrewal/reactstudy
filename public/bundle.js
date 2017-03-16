@@ -57,6 +57,8 @@
 
 	var Main = __webpack_require__(222);
 	var Weather = __webpack_require__(224);
+	var About = __webpack_require__(225);
+	var Example = __webpack_require__(226);
 
 	ReactDOM.render(React.createElement(
 		Router,
@@ -64,6 +66,8 @@
 		React.createElement(
 			Route,
 			{ path: '/', component: Main },
+			React.createElement(Route, { path: 'about', component: About }),
+			React.createElement(Route, { path: 'example', component: Example }),
 			React.createElement(IndexRoute, { component: Weather })
 		)
 	), document.getElementById('app'));
@@ -25451,14 +25455,36 @@
 
 	var React = __webpack_require__(1);
 
+	var _require = __webpack_require__(159),
+	    Link = _require.Link;
+
 	var Nav = React.createClass({
 		displayName: 'Nav',
 
 		render: function render() {
 			return React.createElement(
-				'h2',
+				'div',
 				null,
-				'Nav component'
+				React.createElement(
+					'h2',
+					null,
+					'Nav component'
+				),
+				React.createElement(
+					Link,
+					{ to: '/' },
+					'Get Weather'
+				),
+				React.createElement(
+					Link,
+					{ to: '/about' },
+					'About'
+				),
+				React.createElement(
+					Link,
+					{ to: '/example' },
+					'Example'
+				)
 			);
 		}
 	});
@@ -25490,6 +25516,58 @@
 	});
 
 	module.exports = Weather;
+
+/***/ },
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var About = React.createClass({
+		displayName: 'About',
+
+		render: function render() {
+			return React.createElement(
+				'div',
+				null,
+				React.createElement(
+					'h3',
+					null,
+					'About component'
+				)
+			);
+		}
+	});
+
+	module.exports = About;
+
+/***/ },
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Example = React.createClass({
+		displayName: 'Example',
+
+		render: function render() {
+			return React.createElement(
+				'div',
+				null,
+				React.createElement(
+					'h3',
+					null,
+					'Example component'
+				)
+			);
+		}
+	});
+
+	module.exports = Example;
 
 /***/ }
 /******/ ]);
