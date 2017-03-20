@@ -2,7 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 var Main = require('./components/Main');
-var Weather = require('./components/Weather');
+var Weather = require('./components/WeatherApp/Weather');
 var About = require('./components/About');
 var Example = require('./components/Example');
 

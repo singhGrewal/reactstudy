@@ -25508,21 +25508,45 @@
 
 		getInitialState: function getInitialState() {
 			return {
-				location: 'Miami',
-				temp: 89
+				isLoading: false
 			};
 		},
-
 		handleSearch: function handleSearch(location) {
-			this.setState({
-				location: location,
-				temp: 23
+			var that = this;
+
+			this.setState({ isLoading: true });
+
+			OpenWeatherMap.getTemp(location).then(function (temp) {
+				that.setState({
+					location: location,
+					temp: temp,
+					isLoading: false
+				});
+			}, function (errorMessage) {
+				that.setState({
+					isLoading: false
+				});
+				alert(errorMessage);
 			});
 		},
 		render: function render() {
 			var _state = this.state,
+			    isLoading = _state.isLoading,
 			    temp = _state.temp,
 			    location = _state.location;
+
+
+			function renderMessage() {
+				if (isLoading) {
+					return React.createElement(
+						'h3',
+						null,
+						'Fetching Weather ......'
+					);
+				} else if (temp && location) {
+					return React.createElement(WeatherMessage, { temp: temp, location: location });
+				}
+			}
 
 			return React.createElement(
 				'div',
@@ -25530,10 +25554,10 @@
 				React.createElement(
 					'h3',
 					null,
-					'Weather component'
+					'Weather Component'
 				),
 				React.createElement(WeatherForm, { onSearch: this.handleSearch }),
-				React.createElement(WeatherMessage, { temp: temp, location: location })
+				renderMessage()
 			);
 		}
 	});
@@ -25624,18 +25648,14 @@
 
 	var axios = __webpack_require__(228);
 
-	var OPEN_WEATHER_MAP_URL = 'http://samples.openweathermap.org/data/2.5/weather?appid=fc3ea11fbcc2dd5fdd6dbc7d286f6357&units=imperial';
+	var OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?appid=fc3ea11fbcc2dd5fdd6dbc7d286f6357&units=imperial';
 
-	// fc3ea11fbcc2dd5fdd6dbc7d286f6357
-
-
-	modile.exports = {
+	module.exports = {
 		getTemp: function getTemp(location) {
-
 			var encodedLocation = encodeURIComponent(location);
 			var requestUrl = OPEN_WEATHER_MAP_URL + '&q=' + encodedLocation;
 
-			axios.get(requestUrl).then(function (res) {
+			return axios.get(requestUrl).then(function (res) {
 				if (res.data.cod && res.data.message) {
 					throw new Error(res.data.message);
 				} else {
