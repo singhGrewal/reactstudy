@@ -33,3 +33,6 @@
 #node_modules/babel-preset-stage-2/
 #node_modules/babel-preset-stage-3/
 Would skip repository React/
+
+
+node_modules/
