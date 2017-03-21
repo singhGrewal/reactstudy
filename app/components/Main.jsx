@@ -1,5 +1,5 @@
 var React = require('react');
-var Nav = require('./Nav');
+import Nav from './Nav.jsx';
 
 var Main = React.createClass({
 	render: function () {
@@ -7,7 +7,7 @@ var Main = React.createClass({
 			<div>
 				<Nav/>
 				<h2>Main component</h2>
-				{this.props.children}
+				{/*{this.props.children}*/}
 			</div>
 		)
 	}
