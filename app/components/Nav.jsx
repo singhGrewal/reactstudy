@@ -1,18 +1,35 @@
 var React = require('react');
-var {Link ,IndexLink} = require('react-router');
+var {Link, IndexLink} = require('react-router');
 
 var Nav = React.createClass({
+	
+	onSearch: function (e) {
+		e.preventDefault();
+		alert('Still not Wired');
+	},
+	
 	render: function () {
 		return (
-			<div>
-				<h2>Nav component</h2>
-				<IndexLink to="/">Get Weather</IndexLink>
-				<Link to="/about">About</Link>
-				<Link to="/example">Example</Link>
-			
-			</div>
+			<nav className="navbar navbar-inverse">
+				<div className="container-fluid">
+					<div className="navbar-header">
+						<a className="navbar-brand" href="#">Nav components</a>
+					</div>
+					<ul className="nav navbar-nav">
+						<li><IndexLink to="/">Get Weather</IndexLink></li>
+						<li><Link to="/about">About</Link></li>
+						<li><Link to="/example">Example</Link></li>
+					</ul>
+					<form className="navbar-form navbar-left" onSubmit={this.onSearch}>
+						<div className="form-group">
+							<input type="text" className="form-control" placeholder="Search"/>
+						</div>
+						<button type="submit" className="btn btn-default">Submit</button>
+					</form>
+				</div>
+			</nav>
 		)
 	}
-})
+});
 
 module.exports = Nav;
