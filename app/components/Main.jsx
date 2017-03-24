@@ -1,20 +1,17 @@
-import React from 'react';
-import {ReactDOM, render} from 'react-dom';
-import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'react-router';
+var React = require('react');
+var Nav = require('./Nav');
 
-
-import Nav from './Nav.jsx';
-
-var Main = React.createClass({
-	render: function () {
-		return (
-			<div>
-				<Nav/>
-				<h2>Main component</h2>
-				{/*{this.props.children}*/}
+var Main = (props) => {
+	return (
+		<div>
+			<Nav/>
+			<div className="container">
+				<div className="row">
+					{props.children}
+				</div>
 			</div>
-		)
-	}
-});
+		</div>
+	)
+};
 
 module.exports = Main;
