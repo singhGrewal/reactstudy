@@ -1,3 +1,6 @@
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
 	entry: './app/app.jsx',
 	output: {
@@ -8,6 +11,8 @@ module.exports = {
 		root: __dirname,
 		extensions: ['', '.js', '.jsx']
 	},
+	devtool:['eval-source-map' , 'cheap-module-eval-source-map'],
+	// devtool: 'source-map',
 	module: {
 		loaders: [
 			{
@@ -20,9 +25,9 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				loaders: [ 'style', 'css', 'sass' ]
+				loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
 			}
+		
 		]
 	},
-	devtool: 'cheap-module-eval-source-map'
 };

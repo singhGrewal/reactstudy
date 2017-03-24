@@ -1,5 +1,7 @@
 var React = require('react');
 
+require('./../../stylesheets/about.scss');
+
 var About = React.createClass({
 	render: function () {
 		return (
