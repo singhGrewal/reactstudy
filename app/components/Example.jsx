@@ -1,6 +1,9 @@
 var React = require('react');
 var {Link} = require('react-router');
 
+require('./../../stylesheets/example.scss');
+
+
 var Example = (props) => {
 	return (
 		<div className="col-xs-12 col-sm-4">
