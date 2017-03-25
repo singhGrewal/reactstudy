@@ -1,10 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'src');
 
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 
 var config = {
 	entry: APP_DIR + '/app.jsx',
@@ -24,14 +26,21 @@ var config = {
 				}],
 			},
 			{
-				test: /\.(sass|scss)$/,
-				use: [
-					'style-loader',
-					'css-loader',
-					'sass-loader',
-				]
-			},
+				test: /\.scss$/,
+				use: ExtractTextPlugin.extract({
+					fallbackLoader: 'style-loader',
+					loader: ['css-loader','sass-loader'],
+					publicPath: '/dist',
+				})
+			}
 		]
-	}
+	},
+	plugins: [
+		new ExtractTextPlugin({
+			filename: 'app.css',
+			disable: false,
+			allChunks: true
+		})
+	]
 };
 module.exports = config;
