@@ -12,7 +12,7 @@ var Nav = React.createClass({
 		return (
 			<nav className="navbar navbar-inverse">
 				<div className="navbar-header">
-					<a className="navbar-brand" href="#">Nav components</a>
+					<a className="navbar-brand" href="#">Grewal</a>
 				</div>
 				<ul className="nav navbar-nav">
 					<li><IndexLink to="/">Get Weather</IndexLink></li>

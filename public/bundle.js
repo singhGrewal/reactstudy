@@ -14965,7 +14965,7 @@ var Nav = React.createClass({
 				React.createElement(
 					'a',
 					{ className: 'navbar-brand', href: '#' },
-					'Nav components'
+					'Grewal'
 				)
 			),
 			React.createElement(
