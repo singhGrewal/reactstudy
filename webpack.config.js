@@ -4,6 +4,8 @@ const webpack = require('webpack');
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'src');
 
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 var config = {
 	entry: APP_DIR + '/app.jsx',
 	output: {

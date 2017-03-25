@@ -1,10 +1,11 @@
 {
-  "name": "boilerplate",
+  "name": "Grewal",
   "version": "1.0.0",
-  "description": "Simple react app",
+  "description": "Testing stuff",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack -d --watch",
+    "prod": "webpack -p",
     "start": "node server.js"
   },
   "author": "Tejveer Grewal",
@@ -23,10 +24,11 @@
     "babel-preset-react": "^6.11.1",
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.26.0",
     "node-sass": "^4.5.1",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.0",
-    "webpack": "^2.3.1",
+    "webpack": "^2.3.2",
     "webpack-uglify-js-plugin": "^1.1.9"
   }
 }
