@@ -1,33 +1,30 @@
 var path = require('path');
 var webpack = require('webpack');
 
-module.exports = {
-	entry: './app/app.jsx',
+
+
+var BUILD_DIR = path.resolve(__dirname, 'public');
+var APP_DIR = path.resolve(__dirname, 'src');
+
+var config = {
+	entry: APP_DIR + '/app.jsx',
 	output: {
-		path: __dirname,
-		filename: './public/bundle.js'
+		path: BUILD_DIR,
+		filename: 'bundle.js'
 	},
-	resolve: {
-		root: __dirname,
-		extensions: ['', '.js', '.jsx']
-	},
-	devtool:['eval-source-map' , 'cheap-module-eval-source-map'],
-	// devtool: 'source-map',
-	module: {
-		loaders: [
+	module : {
+		loaders : [
 			{
-				loader: 'babel-loader',
-				query: {
-					presets: ['react', 'es2015', 'stage-0']
-				},
-				test: /\.jsx?$/,
-				exclude: /(node_modules|bower_components)/
+				test : /\.jsx?/,
+				include : APP_DIR,
+				loader : 'babel-loader'
 			},
 			{
 				test: /\.scss$/,
-				loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+				loaders: ['style-loader', 'css-loader', 'sass-loader']
 			}
-		
 		]
-	},
+	}
 };
+
+module.exports = config;
