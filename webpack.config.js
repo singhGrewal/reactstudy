@@ -1,10 +1,8 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
-
-
-var BUILD_DIR = path.resolve(__dirname, 'public');
-var APP_DIR = path.resolve(__dirname, 'src');
+const BUILD_DIR = path.resolve(__dirname, 'public');
+const APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
 	entry: APP_DIR + '/app.jsx',
@@ -12,19 +10,26 @@ var config = {
 		path: BUILD_DIR,
 		filename: 'bundle.js'
 	},
-	module : {
-		loaders : [
+	module: {
+		loaders: [
 			{
-				test : /\.jsx?/,
-				include : APP_DIR,
-				loader : 'babel-loader'
+				test: /\.jsx?/,
+				include: APP_DIR,
+				exclude: [/node_modules/],
+				use: [{
+					loader: 'babel-loader',
+					options: {presets: ['es2015']}
+				}],
 			},
 			{
-				test: /\.scss$/,
-				loaders: ['style-loader', 'css-loader', 'sass-loader']
-			}
+				test: /\.(sass|scss)$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					'sass-loader',
+				]
+			},
 		]
 	}
 };
-
 module.exports = config;

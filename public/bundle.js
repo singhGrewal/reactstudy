@@ -13854,6 +13854,8 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouter = __webpack_require__(75);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 __webpack_require__(285);
@@ -13874,7 +13876,7 @@ var Example = function Example(props) {
 				'li',
 				null,
 				_react2.default.createElement(
-					Link,
+					_reactRouter.Link,
 					{ to: '/?location=Fremont' },
 					'Fremont , CA'
 				)
@@ -13883,7 +13885,7 @@ var Example = function Example(props) {
 				'li',
 				null,
 				_react2.default.createElement(
-					Link,
+					_reactRouter.Link,
 					{ to: '/?location=sandiego' },
 					'San diego , CA'
 				)
