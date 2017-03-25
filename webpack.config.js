@@ -29,6 +29,7 @@ var config = {
 				test: /\.scss$/,
 				use: ExtractTextPlugin.extract({
 					fallbackLoader: 'style-loader',
+					
 					loader: ['css-loader','sass-loader'],
 					publicPath: '/dist',
 				})

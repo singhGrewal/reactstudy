@@ -7,13 +7,19 @@ import Main from './components/Main.jsx';
 import Weather from './components/WeatherApp/Weather.jsx';
 import About from'./components/About.jsx';
 import Example from './components/Example.jsx';
+import Car from './components/Car.jsx';
+
+
+
+
 
 
 render(
 	<Router history={browserHistory}>
 		<Route path="/" component={Main}>
-			<Route path="about" component={About}/>
-			<Route path="example" component={Example}/>
+			<Route path="/about" component={About}/>
+			<Route path="/example" component={Example}/>
+			<Route path="/cars" component={Car}/>
 			<IndexRoute component={Weather}/>
 		</Route>
 	</Router>,

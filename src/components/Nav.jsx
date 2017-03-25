@@ -18,6 +18,7 @@ var Nav = React.createClass({
 					<li><IndexLink to="/">Get Weather</IndexLink></li>
 					<li><Link to="/about">About</Link></li>
 					<li><Link to="/example">Example</Link></li>
+					<li><Link to="/cars">Car</Link></li>
 				</ul>
 				<form className="navbar-form navbar-left" onSubmit={this.onSearch}>
 					<div className="form-group">
