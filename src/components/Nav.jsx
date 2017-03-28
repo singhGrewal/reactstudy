@@ -1,8 +1,6 @@
 var React = require('react');
 var {Link, IndexLink} = require('react-router');
 
-
-
 var Nav = React.createClass({
 	
 	onSearch: function (e) {
@@ -27,11 +25,12 @@ var Nav = React.createClass({
 					<li><Link to="/example">Example</Link></li>
 					<li><Link to="/cars">Car</Link></li>
 					<li className="dropdown">
-						<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+						<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button"
+						   aria-haspopup="true"
 						   aria-expanded="false">Watch <span className="caret"/></a>
 						<ul className="dropdown-menu">
 							<li><Link to="/timer">Timer</Link></li>
-							<li><a href="#">Counter</a></li>
+							<li><Link to="/countdown">Count Down</Link></li>
 						</ul>
 					</li>
 				</ul>

@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 
-
-var About = React.createClass({
+var CountDown = React.createClass({
 	render: function () {
 		return (
 			<div>
-				<h3>About component</h3>
+				<h3>CountDown component</h3>
 			</div>
 		)
 	}
 });
 
-module.exports = About;
+module.exports = CountDown;

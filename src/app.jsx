@@ -8,11 +8,10 @@ import Weather from './components/WeatherApp/Weather.jsx';
 import About from'./components/About.jsx';
 import Example from './components/Example.jsx';
 import Car from './components/Car.jsx';
+import Timer from './components/Timer.jsx';
+import CountDown from './components/CountDown.jsx';
 
-
-
-// require('./../public/app.css');
-
+require('./../stylesheets/Main.scss');
 
 render(
 	<Router history={browserHistory}>
@@ -20,6 +19,8 @@ render(
 			<Route path="/about" component={About}/>
 			<Route path="/example" component={Example}/>
 			<Route path="/cars" component={Car}/>
+			<Route path="/timer" component={Timer}/>
+			<Route path="/countdown" component={CountDown}/>
 			<IndexRoute component={Weather}/>
 		</Route>
 	</Router>,

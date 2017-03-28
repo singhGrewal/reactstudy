@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 
-
-var About = React.createClass({
+var Timer = React.createClass({
 	render: function () {
 		return (
 			<div>
-				<h3>About component</h3>
+				<h3>Timer component</h3>
 			</div>
 		)
 	}
 });
 
-module.exports = About;
+module.exports = Timer;

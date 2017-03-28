@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
-require('./../../stylesheets/example.scss');
-
-
 var Example = (props) => {
 	return (
 		<div className="col-xs-12 col-sm-4">

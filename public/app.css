@@ -4,10 +4,11 @@
   margin-right: auto;
   margin-left: auto; }
 
-h3 {
-  border: 10px solid green;
-  padding: 10px; }
-h3 {
-  border: 20px solid red;
-  padding: 20px;
-  color: green; }
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto; }
+
+.navbar #nav > .active > a {
+  color: red; }
