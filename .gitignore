@@ -36,3 +36,7 @@ Would skip repository React/
 
 
 node_modules/
+
+
+workspace.xml
+.idea/workspace.xml
