@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const path = require('path')
 
 app.use(function (req, res, next) {
 	if (req.headers['x-forwarded-proto'] === 'https') {
@@ -10,11 +11,12 @@ app.use(function (req, res, next) {
 	}
 });
 
-app.use(express.static('public'));
+// serve static assets normally
+app.use(express.static(__dirname + '/public'));
 
-// app.get('*' , function (request , response) {
-// 	response.sendFile(path.resolve(__dirname , 'public' , 'index.html'))
-// });
+app.get('*' , function (request , response) {
+	response.sendFile(path.resolve(__dirname , 'public' , 'index.html'))
+});
 
 app.listen(PORT, function () {
 	console.log('Express server is up on port ' + PORT);

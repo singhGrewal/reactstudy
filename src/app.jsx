@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {render} from 'react-dom';
 // Import routing components
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
-
+// Import custom components
 import Main from './components/Main.jsx';
 import Weather from './components/WeatherApp/Weather.jsx';
 import About from'./components/About.jsx';
@@ -12,6 +12,13 @@ import Timer from './components/Timer.jsx';
 import CountDown from './components/CountDown.jsx';
 
 require('./../stylesheets/Main.scss');
+
+
+
+
+
+
+
 
 render(
 	<Router history={browserHistory}>
