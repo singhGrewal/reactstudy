@@ -45,7 +45,8 @@ var config = {
 		new ReactStaticPlugin({
 			routes: APP_DIR + '/Routes.jsx',  // Path to routes file
 			template: APP_DIR + '/template.js',    // Path to JSX template file
-			title: 'Hello'
+			someData: 'Hello',
+			gotprops: 'Got Props',
 		}),
 	]
 };

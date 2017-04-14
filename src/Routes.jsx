@@ -14,12 +14,6 @@ import CountDown from './components/CountDown.jsx';
 require('./../stylesheets/Main.scss');
 
 
-
-
-
-
-
-
 export const routes = (
 	
 		<Route path="/" component={Main}>
