@@ -1,2 +1,8 @@
 @import "SassComponents/StyleGuide";
 @import "SassComponents/Navbar";
+
+
+a.active {
+  color: #000000 !important;
+  text-decoration: underline !important;
+}

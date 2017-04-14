@@ -20,8 +20,8 @@ require('./../stylesheets/Main.scss');
 
 
 
-render(
-	<Router history={browserHistory}>
+export const routes = (
+	
 		<Route path="/" component={Main}>
 			<Route path="/about" component={About}/>
 			<Route path="/example" component={Example}/>
@@ -30,6 +30,5 @@ render(
 			<Route path="/countdown" component={CountDown}/>
 			<IndexRoute component={Weather}/>
 		</Route>
-	</Router>,
-	document.getElementById('layout')
 );
+export default routes;

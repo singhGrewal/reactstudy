@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-
+const ReactStaticPlugin = require('react-static-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
@@ -9,7 +9,7 @@ const APP_DIR = path.resolve(__dirname, 'src');
 
 
 var config = {
-	entry: APP_DIR + '/app.jsx',
+	entry: APP_DIR + '/Routes.jsx',
 	output: {
 		path: BUILD_DIR,
 		filename: 'bundle.js'
@@ -41,7 +41,12 @@ var config = {
 			filename: 'app.css',
 			disable: false,
 			allChunks: true
-		})
+		}),
+		new ReactStaticPlugin({
+			routes: APP_DIR + '/Routes.jsx',  // Path to routes file
+			template: APP_DIR + '/template.js',    // Path to JSX template file
+			title: 'Hello'
+		}),
 	]
 };
 module.exports = config;
